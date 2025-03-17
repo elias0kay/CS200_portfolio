@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+    <!--link rel="stylesheet" href="c/examples.css" /-->
+    <style>
+      html {
+        background-color: #fbe7a1;
+      }
+      body > *,
+      main > * {
+        outline: 1px #b8e3c9 solid;
+      }
+      * {
+        /*margin: 10px;*/
+        padding: 10px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      nav {
+        background-color: #b8e3c9;
+      }
+      header,
+      footer {
+        text-align: center;
+        background: #d8b4e2;
+        color: white;
+      }
+      main {
+        background-color: #b8e3c9;
+      }
+      body,
+      nav,
+      main,
+      article {
+        display: flex;
+      }
+      body,
+      article {
+        flex-direction: column;
+        background-color: white;
+        margin: 5px;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0; /* Optional: reset padding */
+        margin: 0; /* Optional: reset margin */
+        background-color: #b8e3c9;
+      }
+
+      article {
+        flex: 1 1 calc(33.33% - 10px); /* Subtract the combined margins */
+        margin: 5px;
+        box-sizing: border-box; /* Ensures padding/margin are included in size */
+      }
+
+      img {
+        width: 100%;
+        background-color: #ccc;
+        padding: 0;
+      }
+
+      p {
+        flex: 1 0 auto;
+      }
+      nav {
+        display: flex;
+        padding: 5px 2px;
+      }
+      nav a {
+        flex: 1 0;
+        margin: 0 5px;
+        background-color: white;
+        color: blueviolet;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid blueviolet;
+        border-radius: 5px;
+      }
+      header img {
+        width: 150px;
+        height: 100px;
+        background-color: #d8b4e2;
+      }
+      article img {
+        border: 2px solid #d8b4e2;
+        border-radius: 5px;
+      }
+      article a:hover img {
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s linear;
+      }
+      article p {
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+        font-size: 1.2;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        background-color: #d8b4e2;
+        list-style: none;
+        padding: 0.5em;
+        margin: 0;
+      }
+      li {
+        font-family: sans-serif;
+        font-size: 1em;
+      }
+      nav a:link,
+      nav a:visited {
+        color: #d8b4e2;
+      }
+      nav a:focus,
+      nav a:hover,
+      nav a:active {
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: #d8b4e2;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      nav a {
+        display: block;
+        border: 1px solid #d8b4e2;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+      }
+      footer {
+        background-color: #d8b4e2;
+        color: white;
+        text-align: center;
+      }
+      footer img {
+        width: 50px;
+        height: 50px;
+        margin: 0 0.5em;
+        background-color: #d8b4e2;
+      }
+      h1,
+      h3 {
+        text-align: left;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      }
+      h1:first-letter {
+        color: #fbe7a1;
+        padding: 0 0.3rem;
+        margin: 0 0.3rem 0 0;
+        border: 2px solid;
+        border-radius: 8px;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+
+        font-size: 4rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li>
+          <img src="images/roberto.svg" alt="roberto" /><br />Roberto
+          Aguado-Froylan
+        </li>
+        <li>
+          <h1 style="text-align: left">Welcome to my portfolio page!</h1>
+          <h3 style="text-align: left">
+            Below I have posted images of several of my web pages which
+            illustrate my work. <br />
+            Click on an image to see the actual web page.
+          </h3>
+        </li>
+      </ul>
+    </header>
+    <nav>
+      <a href="#1">Home</a>
+      <a href="#2">About</a>
+      <a href="#3">Blog</a>
+      <a href="#4">Career</a>
+      <a href="#5">Contact Me</a>
+    </nav>
+    <main>
+      <article>
+        <a href="bistro/ex4-5_index.html">
+          <img src="images/black_goose_bistro.png" alt="bistro"
+        /></a>
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img src="images/bistro_news.png" alt="bistro news" />
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img src="images/jens_kitchen.png" alt="jens kitchen" />
+        <p>Describe the project here.</p>
+      </article>
+
+      <article>
+        <img alt="" src="images/blackGooseGallery.png" />
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img alt="" src="images/cookingWithDaniel.png" />
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img alt="" src="images/chapter24-2.png" />
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img alt="" src="images/under-construction-animated-gif-8.gif" />
+        <p>Describe the project here.</p>
+      </article>
+      <article>
+        <img alt="" src="images/under-construction-animated-gif-8.gif" />
+        <p>Describe the project here.</p>
+      </article>
+    </main>
+    <footer>
+      <p>Please visit my social media pages</p>
+      <p>
+        <img src="icons/twitter.svg" alt="twitter" />
+        <img src="icons/facebook.svg" alt="facebook" />
+        <img src="icons/instagram.svg" alt="instagram" />
+      </p>
+    </footer>
+  </body>
+</html>
