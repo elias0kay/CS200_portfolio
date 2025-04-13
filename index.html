@@ -29,8 +29,19 @@
         background: #d8b4e2;
         color: white;
       }
-      main {
-        background-color: #b8e3c9;
+      header ul {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        flex-wrap: wrap; /* Adjusts for small screens */
+        list-style-type: none; /* Removes bullets */
+        margin: 0;
+        padding: 0;
+      }
+
+      header li {
+        margin: 10px;
+        text-align: center; /* Centers text within each item */
       }
       body,
       nav,
@@ -95,7 +106,7 @@
         transition: transform 0.3s linear;
       }
       article p {
-        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+        font-family: 'Arial', sans-serif;
         font-size: 1.2;
       }
       ul {
@@ -120,25 +131,6 @@
         color: #fff;
         border: 1px solid #fff;
         background-color: #d8b4e2;
-      }
-      nav ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        font-size: 0.8em;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-      }
-      nav a {
-        display: block;
-        border: 1px solid #d8b4e2;
-        border-radius: 0.5em;
-        padding: 0.5em 1em;
-        margin: 0.5em;
       }
       footer {
         background-color: #d8b4e2;
@@ -167,32 +159,81 @@
         font-size: 4rem;
         line-height: 1;
       }
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column; /* Change main container to a vertical layout */
+        }
+        nav {
+          flex-direction: column;
+          align-items: center; /* Center the navigation items vertically */
+        }
+        nav a {
+          width: 50%;
+          margin: 5px;
+        }
+        article {
+          flex: 1 1 100%; /* Each article takes up the full width of its row */
+          margin: 5px auto; /* Center articles vertically */
+        }
+      }
+      @media (max-width: 600px) {
+        header ul {
+          flex-direction: column; /* Stacks items vertically */
+        }
+
+        header h1,
+        header h3 {
+          text-align: center; /* Centers text for small screens */
+          font-size: 1.5em; /* Adjusts font size */
+        }
+
+        header img {
+          max-width: 80%; /* Scales image */
+          height: auto; /* Maintains aspect ratio */
+        }
+        header {
+          padding: 10px 20px;
+        }
+      }
+      .center-content {
+        display: flex;
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Centers items horizontally */
+        text-align: center; /* Centers text under the image */
+      }
+
+      .center-content img {
+        max-width: 100%; /* Ensures image scales on smaller screens */
+        height: auto; /* Maintains aspect ratio */
+        margin-bottom: 10px; /* Adds space below the image */
+        margin-top: 5px;
+      }
+
+      .center-content h1,
+      .center-content h3 {
+        margin-top: 5px; /* Adds space above the text */
+        margin-bottom: 5px;
+      }
     </style>
   </head>
 
   <body>
     <header>
-      <ul>
-        <li>
-          <img src="images/roberto.svg" alt="roberto" /><br />Roberto
-          Aguado-Froylan
-        </li>
-        <li>
-          <h1 style="text-align: left">Welcome to my portfolio page!</h1>
-          <h3 style="text-align: left">
-            Below I have posted images of several of my web pages which
-            illustrate my work. <br />
-            Click on an image to see the actual web page.
-          </h3>
-        </li>
-      </ul>
+      <div class="center-content">
+        <img src="images/roberto.svg" alt="roberto" />
+        <h1>Welcome to my portfolio page!</h1>
+        <h3>
+          Below I have posted images of my web pages to illustrate my work.
+        </h3>
+        <h3>Click on an image to see the actual web page.</h3>
+      </div>
     </header>
     <nav>
-      <a href="#1">Home</a>
-      <a href="#2">About</a>
-      <a href="#3">Blog</a>
-      <a href="#4">Career</a>
-      <a href="#5">Contact Me</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Career</a>
+      <a href="#">Contact Me</a>
     </nav>
     <main>
       <article>
