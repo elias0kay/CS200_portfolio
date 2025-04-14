@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>My Portfolio</title>
-    <!--link rel="stylesheet" href="c/examples.css" /-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       html {
         background-color: #fbe7a1;
@@ -40,7 +40,7 @@
       }
 
       header li {
-        margin: 10px;
+        margin: 0;
         text-align: center; /* Centers text within each item */
       }
       body,
@@ -159,6 +159,31 @@
         font-size: 4rem;
         line-height: 1;
       }
+      .center-content img {
+        margin-top: 0; /* Reduces space above */
+        margin-bottom: 0; /* Reduces space below */
+      }
+
+      .center-content h2 {
+        margin: 0 0; /* Tightens spacing around the name */
+        font-size: 1em; /* Keeps the name visually distinct */
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .center-content h1,
+      .center-content h3 {
+        margin-top: 0; /* Controls spacing above each heading */
+        margin-bottom: 0; /* Controls spacing below each heading */
+      }
+
+      .center-content {
+        padding: 0; /* Eliminates unnecessary padding around elements */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
       @media (max-width: 768px) {
         main {
           flex-direction: column; /* Change main container to a vertical layout */
@@ -192,7 +217,7 @@
           height: auto; /* Maintains aspect ratio */
         }
         header {
-          padding: 10px 20px;
+          padding: 0 0;
         }
       }
       .center-content {
@@ -205,14 +230,14 @@
       .center-content img {
         max-width: 100%; /* Ensures image scales on smaller screens */
         height: auto; /* Maintains aspect ratio */
-        margin-bottom: 10px; /* Adds space below the image */
-        margin-top: 5px;
+        margin-bottom: 0; /* Adds space below the image */
+        margin-top: 0;
       }
 
       .center-content h1,
       .center-content h3 {
-        margin-top: 5px; /* Adds space above the text */
-        margin-bottom: 5px;
+        margin-top: 0; /* Adds space above the text */
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -220,10 +245,12 @@
   <body>
     <header>
       <div class="center-content">
-        <img src="images/roberto.svg" alt="roberto" />
+        <img src="images/roberto.svg" alt="Roberto Aguado-Froylan" />
+        <h2>Roberto Aguado-Froylan</h2>
         <h1>Welcome to my portfolio page!</h1>
         <h3>
-          Below I have posted images of my web pages to illustrate my work.
+          Below I have posted images of several of my web pages which illustrate
+          my work.
         </h3>
         <h3>Click on an image to see the actual web page.</h3>
       </div>
